@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Contributions</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <header>
+        
+        <h1>My Contributions</h1>
+
+            <nav>
+                <ul>
+                    <li><a href="mywebpage.html">Home</a></li>
+                    <li><a href="aboutme.html">About Me</a></li>
+                    <li><a href="contributions.html">My Contributions</a></li>
+                </ul>
+            </nav>
+    </header>
+    <section>
+        <h2>Projects I Contributed to</h2>
+        <ul>
+            <li>Current map of Arar oil fields</li>
+            <li>Kütahya 13,000 hectares of consolidation</li>
+            <li>Measurement of 2 mining sites in Uşak</li>
+            <li>Measurement of 2 mining sites in Denizli</li>
+            <li>400 hectares of survey map in Eskişehir Sivrihisar</li>
+            <li>Hydro Power Plant control measurement in Ordu</li>
+            <li>Control measurement of 2 dams in Mersin</li>
+            <li>Measurement of 2 mining sites in Adana</li>
+            <li>Mine site measurement in Tokat</li>
+            <li>Mine site measurement in Bilecik</li>
+            <li>Construction of 2 factories in Ankara</li>
+            <li>5 Solar Power Plants in Van on the current map</li>
+            <li>etc.</li>
+        </ul>
+    </section>
+
+</body>
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Globe with OpenStreetMap</title>
+    <style>
+        h1 {
+            text-align: center; /* Başlığı ortalamak için */
+            font-size: 50px;    /* İsteğe bağlı: Yazı boyutunu ayarlayabilirsiniz */
+            margin-top: 50px;
+            color: white;   /* İsteğe bağlı: Üst boşluk ekleyebilirsiniz */
+        }
+    </style>
+</head>
+<body>
+    <h1>Some of the Locations I Have Worked in Turkey</h1>
+   
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Globe with OpenStreetMap</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 1200px;
+            width: 100%;
+        }
+        .popup-images {
+            display: flex;
+            gap: 5px;
+        }
+        .popup-images img {
+            width: 100px; 
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+
+        var map = L.map('map').setView([39.925533, 32.866287], 6);
+
+ 
+ 
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var Arar_energyMarker = L.marker([37.77469354301378, 39.06926309615602]).addTo(map);
+        Arar_energyMarker.bindPopup("<b>Arar Energy</b><br><img src='images/arar_petrol.png' alt='Istanbul' width='200'>");
+
+        var KayseriMarker = L.marker([38.73006646320882, 35.477815607029285]).addTo(map);
+        KayseriMarker.bindPopup(
+            "<b>Ankara-Kayseri Train Line</b><br>" +
+            "<div class='popup-images'>" + 
+            "<img src='images/kayseri_1.jpg' alt='Kayseri Photo 1'>" +
+            "<img src='images/kayseri_2.jpg' alt='Kayseri Photo 2'>" +
+            "</div>"
+        );
+        var PamuklukMarker = L.marker([37.064840124820726, 34.712591648049276]).addTo(map);
+        PamuklukMarker.bindPopup("<b>Pamukluk Dam</b><br><img src='images/pamukluk.jpg' alt='Mersin' width='200'>");
+
+        var AksifatMarker = L.marker([36.82800535083027, 33.893580612274384]).addTo(map);
+        AksifatMarker.bindPopup("<b>Aksifat Dam</b><br><img src='images/aksifat.jpg' alt='Mersin' width='200'>");
+
+        var TokatMadenMarker = L.marker([40.249016296938635, 35.529452172199896]).addTo(map);
+        TokatMadenMarker.bindPopup("<b>Tokat Opal Mine </b><br><img src='images/tokat_maden.jpg' alt='Tokat' width='200'>");
+
+        var KütahyaMarker = L.marker([39.14294946068998, 29.97914007673315]).addTo(map);
+       KütahyaMarker.bindPopup("<b>Kütahya Consolidation</b><br><img src='images/kütahya.jpg' alt='Kütahya' width='200'>");
+
+        var HatayMadenMarker = L.marker([36.58309858749817, 36.23790461771561]).addTo(map);
+       HatayMadenMarker.bindPopup("<b>Hatay Olivine Mine</b><br><img src='images/hatay_maden.jpg' alt='Hatay' width='200'>");
+
+       
+    </script>
+</body>
+</html>
